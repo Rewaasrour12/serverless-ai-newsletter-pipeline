@@ -1,0 +1,125 @@
+{
+  "collected_at": "2026-06-04T10:43:29.019278",
+  "total_items": 17,
+  "items": [
+    {
+      "title": "Schedule notebook runs in Amazon SageMaker Unified Studio",
+      "link": "https://aws.amazon.com/blogs/big-data/schedule-notebook-runs-in-amazon-sagemaker-unified-studio/",
+      "description": "In this post, we walk you through the new scheduling and orchestrating capabilities for notebooks in Amazon SageMaker Unified Studio.",
+      "pub_date": "Wed, 03 Jun 2026 20:19:11 +0000",
+      "source": "AWS Big Data Blog"
+    },
+    {
+      "title": "Amazon OpenSearch Service: Mechanisms to secure your domain",
+      "link": "https://aws.amazon.com/blogs/big-data/amazon-opensearch-service-mechanisms-to-secure-your-domain/",
+      "description": "This post offers an overview of the security mechanisms available for Amazon OpenSearch Service, spanning authentication and authorization, encryption, and network access controls. You learn how to implement fine-grained access control, manage AWS Identity and Access Management (IAM) roles, and secu",
+      "pub_date": "Wed, 03 Jun 2026 15:21:53 +0000",
+      "source": "AWS Big Data Blog"
+    },
+    {
+      "title": "Capture data lineage of Amazon EMR spark jobs into Amazon SageMaker Unified Studio",
+      "link": "https://aws.amazon.com/blogs/big-data/capture-data-lineage-of-amazon-emr-spark-jobs-into-amazon-sagemaker-unified-studio/",
+      "description": "In this post, you’ll walk through a practical, step-by-step example that shows how to capture and track data lineage from Spark jobs running on Amazon EMR directly into Amazon SageMaker Catalog using OpenLineage. You’ll see how lineage metadata flows automatically and explore data relationships and ",
+      "pub_date": "Mon, 01 Jun 2026 18:37:47 +0000",
+      "source": "AWS Big Data Blog"
+    },
+    {
+      "title": "The next generation of Amazon OpenSearch Serverless: Built from the ground up for agents",
+      "link": "https://aws.amazon.com/blogs/big-data/the-next-generation-of-amazon-opensearch-serverless-built-from-the-ground-up-for-agents/",
+      "description": "Today, we are announcing a ground-up re-architecture of Amazon OpenSearch Serverless that delivers up to 20 times faster autoscaling, scale to zero, and up to 60% lower cost than provisioning clusters for peak load. Amazon OpenSearch Service is a fully managed, open source retrieval engine that unif",
+      "pub_date": "Thu, 28 May 2026 18:24:54 +0000",
+      "source": "AWS Big Data Blog"
+    },
+    {
+      "title": "How Buildkite Operates Test Analytics at Massive Scale with Amazon MSK and Amazon Managed Service for Apache Flink",
+      "link": "https://aws.amazon.com/blogs/big-data/how-buildkite-operates-test-analytics-at-massive-scale-with-amazon-msk-and-amazon-managed-service-for-apache-flink/",
+      "description": "In this post, we explore how Buildkite uses Amazon Managed Streaming for Apache Kafka (Amazon MSK) and Amazon Managed Service for Apache Flink to power Test Engine’s streaming-first analytics architecture at scale.",
+      "pub_date": "Wed, 27 May 2026 18:22:34 +0000",
+      "source": "AWS Big Data Blog"
+    },
+    {
+      "title": "Building a data stack for trusted AI",
+      "link": "https://www.getdbt.com/blog/data-stack-trusted-ai",
+      "description": "Trusted AI requires governed, consistent, and contextual data. Here’s how to build it without tying yourself down.",
+      "pub_date": "Wed, 03 Jun 2026 16:55:00 GMT",
+      "source": "dbt Blog"
+    },
+    {
+      "title": "dbt Labs Named Snowflake Data Integration Product Partner of the Year",
+      "link": "https://www.getdbt.com/blog/dbt-labs-named-snowflake-data-integration-product-partner-of-the-year",
+      "description": "dbt Labs wins two Snowflake Partner honors: Data Integration Product Partner of the Year and Snowflake’s CoCo Adoption Award",
+      "pub_date": "Tue, 02 Jun 2026 19:00:00 GMT",
+      "source": "dbt Blog"
+    },
+    {
+      "title": "What we announced at Snowflake Summit and why it matters",
+      "link": "https://www.getdbt.com/blog/what-we-announced-at-snowflake-summit-and-why-it-matters",
+      "description": "dbt State, dbt Wizard, dbt Core v2.0, and the Fivetran merger",
+      "pub_date": "Mon, 01 Jun 2026 13:00:00 GMT",
+      "source": "dbt Blog"
+    },
+    {
+      "title": "Fivetran and dbt are one company now. Here's what that means.",
+      "link": "https://www.getdbt.com/blog/fivetran-and-dbt-are-one-company-now-here-s-what-that-means",
+      "description": "Fivetran and dbt Labs are officially one company to deliver data infrastructure for agents you trust.",
+      "pub_date": "Mon, 01 Jun 2026 13:00:00 GMT",
+      "source": "dbt Blog"
+    },
+    {
+      "title": "Fivetran + dbt Labs Complete Merger to Create the Data Infrastructure for Trusted AI Agents",
+      "link": "https://www.getdbt.com/blog/fivetran-dbt-labs-complete-merger-to-create-the-data-infrastructure-for-trusted-ai-agents",
+      "description": "Fivetran and dbt Labs are now one company, focused on building the data foundation for the agentic AI era.",
+      "pub_date": "Mon, 01 Jun 2026 13:00:00 GMT",
+      "source": "dbt Blog"
+    },
+    {
+      "title": "Context as Code",
+      "link": "https://www.oreilly.com/radar/context-as-code/",
+      "description": "As syntax becomes cheap and abundant, architectural control becomes the scarce resource. Effective governance starts upstream, where intent, constraints, and threat models shape the agent’s working context before generation begins. The goal isn’t better prompting but build-time boundaries that preve",
+      "pub_date": "Wed, 03 Jun 2026 11:00:14 +0000",
+      "source": "O'Reilly Radar"
+    },
+    {
+      "title": "Radar Trends to Watch: June 2026",
+      "link": "https://www.oreilly.com/radar/radar-trends-to-watch-june-2026/",
+      "description": "Coauthored with Claude Agents are making the transition from performing tasks to running operations. The Cloudflare and Stripe partnership ships an agent that opens accounts, registers domains, and deploys an application on its own (details), while Stripe/Tempo and iWallet have each published machin",
+      "pub_date": "Tue, 02 Jun 2026 10:58:22 +0000",
+      "source": "O'Reilly Radar"
+    },
+    {
+      "title": "AI Sovereignty and the Architecture of Participation",
+      "link": "https://www.oreilly.com/radar/ai-sovereignty-and-the-architecture-of-participation/",
+      "description": "Adam Tooze recently shared a piece from The Economist about Brazil&#8217;s push for what it calls &#8220;medical sovereignty,&#8221; the determination to make its own vaccines and the active ingredients that go into its medicines rather than depend on supply chains it doesn&#8217;t control. Brazil a",
+      "pub_date": "Mon, 01 Jun 2026 16:05:58 +0000",
+      "source": "O'Reilly Radar"
+    },
+    {
+      "title": "SaaS Is Not Dead Yet",
+      "link": "https://www.oreilly.com/radar/saas-is-not-dead-yet/",
+      "description": "With the rise of agents, many people have been proclaiming that the age of software as a service (SaaS) is over. Who needs to subscribe to a service when you can create your own software with a few English-language prompts and a few dollars spent on tokens? Your own software, most likely a skill tha",
+      "pub_date": "Mon, 01 Jun 2026 11:01:35 +0000",
+      "source": "O'Reilly Radar"
+    },
+    {
+      "title": "Open Source Ecosystems",
+      "link": "https://www.oreilly.com/radar/open-source-ecosystems/",
+      "description": "The following article originally appeared on the Asimov&#8217;s Addendum Substack and is being reposted here with the author&#8217;s permission. Bill Gurley&#160;has an excellent article on what he calls&#160;open source strategy,&#160;which we recommend reading. There is a lot to debate about his c",
+      "pub_date": "Fri, 29 May 2026 11:00:08 +0000",
+      "source": "O'Reilly Radar"
+    },
+    {
+      "title": "Learn SQL Once, Use It for 30 Years",
+      "link": "https://fagnerbrack.com/learn-sql-once-use-it-for-30-years-9aceb0bdee03",
+      "description": "Score: 99 | Comments: 55",
+      "pub_date": "2026-05-31 17:16:15",
+      "source": "Hacker News"
+    },
+    {
+      "title": "Show HN: Mnemo – local-first AI memory layer for any LLM (Rust, SQLite,petgraph)",
+      "link": "https://github.com/zaydmulani09/mnemo",
+      "description": "Score: 43 | Comments: 18",
+      "pub_date": "2026-06-03 20:32:10",
+      "source": "Hacker News"
+    }
+  ]
+}
