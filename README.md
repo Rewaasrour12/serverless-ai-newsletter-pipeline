@@ -1,58 +1,59 @@
 # Serverless AI Newsletter Pipeline
 
-An automated pipeline that runs every Friday. It collects news from the data field — like pipelines, warehousing, analytics, and tools — then sends everything to Claude to summarize it, and finally delivers a clean HTML newsletter to my inbox.
+An automated pipeline that runs every Friday. It collects news from the data field — pipelines, warehousing, analytics, and tools — sends it to Claude to summarize, and delivers a clean HTML newsletter to my inbox.
 
-No manual work at all.
-
-Everything is built using AWS serverless services.
+Everything runs on AWS serverless services and No manual work. 
 
 ---
 
-## The Problem I Was Trying to Solve
+## The Problem
 
-Keeping up with the data field is not easy. Every week there are new tools, blog posts, Hacker News stories, and updates from different companies.
+Keeping up with the data field is not easy. Every week there are new tools, blog posts, Hacker News threads, and updates from different companies.
 
-I wanted something simple that collects all of this for me and sends a short summary every Friday morning.
+I wanted something that collects all of this for me and sends a short summary every Friday morning — without me doing anything.
 
 ---
 
 ## How It Works
 
-The system uses three AWS Lambda functions. They run every Friday using EventBridge.
+Three Lambda functions, triggered every Friday by EventBridge.
 
-### 1. Controller Lambda  
-This function collects articles from different sources. It uses 6 RSS feeds like AWS Big Data Blog, dbt Blog, Netflix Tech Blog, LinkedIn Engineering, Astronomer, and O’Reilly Radar.
+### 1. Collector Lambda
 
-It also gets top stories from Hacker News and filters them using keywords like Kafka, Spark, Airflow, dbt, SQL, and analytics.
+Pulls articles from 6 RSS feeds: AWS Big Data Blog, dbt Blog, Netflix Tech Blog, LinkedIn Engineering, Astronomer, and O'Reilly Radar.
 
-All the data is saved in an S3 bucket as a JSON file.
+Also scrapes top Hacker News stories and filters by keywords like Kafka, Spark, Airflow, dbt, SQL, and analytics.
 
----
-
-### 2. Summarizer Lambda  
-This function reads the data from S3 and sends it to Claude (via Amazon Bedrock).
-
-Claude creates a full HTML newsletter from the data. The newsletter has 5 parts:
-- Biggest news this week  
-- Tools worth watching  
-- Market trends  
-- Deep dive of the week  
-- Practical takeaways  
-
-The final HTML is saved in S3 as a static website (index.html).
+All collected data gets saved to S3 as a JSON file.
 
 ---
 
-### 3. Notifier Lambda  
-This function sends an email using Amazon SES.
+### 2. Summarizer Lambda
 
-The email includes a link to the newsletter, so I can open it with one click.
+Reads the JSON from S3 and sends it to Claude via Amazon Bedrock.
+
+Claude summarizes the articles and generates the HTML newsletter with 5 sections:
+- Biggest news this week
+- Tools worth watching
+- Market trends
+- Deep dive of the week
+- Practical takeaways
+
+The HTML is saved to S3 as index.html and served as a static website.
+
+---
+
+### 3. Notifier Lambda
+
+Sends an email via Amazon SES with a direct link to the newsletter. One click to open it.
 
 ---
 
 ## Architecture
 
-(EventBridge → Controller Lambda → S3 → Summarizer Lambda (Bedrock / Claude) → S3 Static Website → SES Email)
+```
+EventBridge → Controller Lambda → S3 → Summarizer Lambda (Bedrock / Claude) → S3 Static Website → SES Email
+```
 
 ---
 
@@ -62,7 +63,7 @@ The email includes a link to the newsletter, so I can open it with one click.
 |---|---|
 | AWS Lambda (Python) | Runs all the functions |
 | Amazon S3 | Stores raw data and hosts the website |
-| Amazon Bedrock (Claude Haiku) | Summarizes and generates the newsletter |
+| Amazon Bedrock (Claude Haiku) | Summarizes the articles and generates the newsletter |
 | Amazon SES | Sends email notifications |
 | Amazon EventBridge | Triggers the pipeline every Friday |
 
@@ -85,29 +86,27 @@ The email includes a link to the newsletter, so I can open it with one click.
 ![S3 Bucket](datafield-weekly-serverless-pipline/Screenshots/S3_Bucket.png)
 ![JSON File](datafield-weekly-serverless-pipline/Screenshots/Json_File_S3_Bucket.png)
 
-----
+---
 
-
-### Project Structure
+## Project Structure
 
 ```text
 serverless-ai-newsletter-pipeline/
-├── controller_lambda/
-│   └── lambda_function.py        # Collects RSS feeds + Hacker News data
-├── summarizer_lambda/
-│   └── lambda_function.py        # Sends data to Claude (Bedrock) and generates HTML
-├── notifier_lambda/
-│   └── lambda_function.py        # Sends email via SES
-├── data/
-│   └── raw_collected.json        # Raw collected data from S3
-├── screenshots/
-│   ├── Mail.png
-│   ├── Website_1.png
-│   ├── Website_2.png
-│   ├── Collector_Lambda.png
-│   ├── Summarizer_Lambda.png
-│   ├── S3_Bucket.png
-│   └── Json_File_S3_Bucket.png
-├── architecture/
-│   └── architecture.png          # AWS system design diagram
+├── datafield-weekly-serverless-pipline/
+│   └── Screenshots/
+│       ├── Collector_Lambda.png
+│       ├── Json_File_S3_Bucket.png
+│       ├── Mail.png
+│       ├── Original_Source_1.png
+│       ├── S3_Bucket.png
+│       ├── Summarizer_Lambda.png
+│       ├── Website_1.png
+│       └── Website_2.png
+├── lambdas/
+│   ├── data/
+│   │   └── raw_collected.json
+│   ├── newsletter-collector.py
+│   ├── newsletter-notifier.py
+│   └── newsletter-summarizer.py
 └── README.md
+```
